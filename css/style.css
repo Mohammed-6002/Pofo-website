@@ -4,6 +4,7 @@
     --page-font: "Ubuntu", serif;
     --header-background-color: black;
     --nav-background-color: black;
+    --footer-background-color: black;
 }
 
 * {
@@ -18,27 +19,63 @@ body {
 
 header {
     position: sticky;
+    width: 100vw;
+    height: 7vh;
     top: 0;
     background-color: var(--header-background-color);
-    height: 10vh; 
-    display: flex;
-    align-items: center; 
-    justify-content: space-between; 
 }
 
 nav {
     display: flex;
+    align-items: center;
+    height: 7vh;
+    position: absolute;
     background-color: var(--nav-background-color);
-    font-size: 32px;
-    height: 60%;
+
 }
 
 nav > a {
-    display: block;
-    padding: 10px 15px; 
-    background-color: var(--nav-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 200px;
+    background-color: black;
     text-decoration: none;
     font-weight: bold;
-    width: 280px;
-    height: 100%;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+nav > a:hover {
+    background-color: red;
+}
+
+main {
+    width: 100vw;
+    height: auto;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 100vw;
+    height: 6vh;
+    background-color: var(--footer-background-color)
+}
+
+footer > p {
+    position: absolute;
 }
