@@ -1,0 +1,120 @@
+:root {
+    --page-background-color: #141922;
+    --page-text-color: white;
+    --page-font: "Ubuntu", serif;
+    --header-background-color: black;
+    --nav-background-color: black;
+    --footer-background-color: black;
+}
+
+* {
+    background-color: var(--page-background-color);
+    color: var(--page-text-color);
+    font-family: var(--page-font);
+}
+
+.wrapper-profile {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr 0.25fr;
+    grid-template-areas: 
+    "header header"
+    "picture content"
+    "footer footer";
+}
+
+.wrapper-header {
+    grid-area: header;
+}
+
+.wrapper-picture {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    grid-area: picture;
+}
+
+.wrapper-content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    grid-area: content;
+}
+
+.wrapper-footer {
+    grid-area: footer;
+}
+
+.layout {
+    background-color: var(--page-background-color);
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    height: 7vh;
+    top: 0;
+    background-color: var(--header-background-color);
+    grid-area: header;
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    position: absolute;
+    background-color: var(--nav-background-color);
+
+}
+
+.pages > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 200px;
+    background-color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.pages > a:hover {
+    background-color: red;
+}
+
+.pages > :nth-child(1) {
+    background-color: #ad2e32;
+}
+
+main {
+    width: 100vw;
+    height: auto;
+}
+
+.profile-picture {
+    width: 55%;
+    margin-right: 2%;
+}
+
+.profile-content {
+    margin-bottom: 15%;
+}
+
+.wrapper-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    background-color: var(--footer-background-color)
+}
+
+.wrapper-footer > p {
+    background-color: var(--footer-background-color)
+}
